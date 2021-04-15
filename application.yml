@@ -1,6 +1,14 @@
-
-
-
-
-
-
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/student
+    driver-class-name: org.postgresql.Driver
+    data-username: qbis
+    data-password: qbis
+  jpa:
+    properties:
+      hibernate:
+        formatSql: true
+        naming:
+          #physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    databasePlatform: "org.hibernate.dialect.PostgreSQLDialect"
+    show-sql: false
